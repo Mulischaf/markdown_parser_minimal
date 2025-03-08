@@ -1,5 +1,5 @@
 # Minimal Markdown Parser For PHP
-Very simple, low level Markdown Parser for PHP. I don't need more functions or parsing features, so this minimal, light weigh version covers my needs for my blog. 
+Very simple, low level Markdown Parser for PHP. I don't need more functions or parsing features, so this minimal, light weight version covers my needs for my blog. 
 
 ## It can parse:
 * Headlines
