@@ -1,7 +1,7 @@
 <?php
 // Very simple, quick & dirty example
 
-// Include the parser in your website somehwere at the top, depending on the rest of your code:
+// Include the parser in your website somewhere at the top, depending on the rest of your code:
 require_once __DIR__ . '/markdown.php';
 $parser = new SecureMarkdownParser();
 
