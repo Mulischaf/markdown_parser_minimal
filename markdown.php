@@ -19,7 +19,7 @@ class SecureMarkdownParser {
         $markdown = htmlspecialchars($markdown, ENT_QUOTES, 'UTF-8');
 
 // -----------------------------------------------------------------------
-// Code blocks
+// Code (8 empty blanks/spaces)
 // -----------------------------------------------------------------------
         $codeBlocks = [];
         $markdown = preg_replace_callback('/((?:^|\n)( {4,8}.*(?:\n|$))+)/m', function($matches) use (&$codeBlocks) {
@@ -31,11 +31,15 @@ class SecureMarkdownParser {
         }, $markdown);
 
 // -----------------------------------------------------------------------
-// bold **Text** oder __Text__
+// bold **Text**
 // -----------------------------------------------------------------------
         $markdown = preg_replace('/\*\*(.*?)\*\*/s', '<strong>$1</strong>', $markdown);
-        $markdown = preg_replace('/__(.*?)__/s', '<strong>$1</strong>', $markdown);
 
+// -----------------------------------------------------------------------
+// italic *Text*
+// -----------------------------------------------------------------------
+        $markdown = preg_replace('/\*(.*?)\*/s', '<em>$1</em>', $markdown);
+        
 // -----------------------------------------------------------------------
 // Images ![Alt](URL) -> <img src="URL" alt="Alt">
 // -----------------------------------------------------------------------
