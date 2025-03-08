@@ -6,8 +6,9 @@ Very simple, low level Markdown Parser for PHP. I don't need all functions or pa
 * Links
 * Images
 * Code block
-* Unordered list
 * bold
+* italic
+* Unordered list
 
 ## Safety:
 * DoS, too long entries will be blocked (can be set)
