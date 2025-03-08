@@ -1,5 +1,5 @@
 # Minimal Markdown Parser For PHP
-Very simple, low level Markdown Parser for PHP. I don't need more functions or parsing features, so this minimal, light weight version covers my needs for my blog. 
+Very simple, low level Markdown Parser for PHP. I don't need all functions or parsing features of the big ones, so this minimal, light weight version covers my tiny needs for my blog. 
 
 ## It can parse:
 * Headlines
@@ -10,17 +10,15 @@ Very simple, low level Markdown Parser for PHP. I don't need more functions or p
 * bold
 
 ## Safety:
-* too long entries will be blocked (can be set)
+* DoS, too long entries will be blocked (can be set)
 * HTML Escape & sanitizing
 * Whitelisting of Code
 * Blocks JavaScript inside Markdown
 * X-Frame, XSS
 
 ## How to use:
-* Save it as markdown.php file.
-* Include the file in your blog or whatever PHP page, for example: require_once __DIR__ . '/markdown.php';
-* Now include the main function somewhere on the top: $parser = new SecureMarkdownParser();
-* And change the output of cour content to: parser->parse($post['content']);
+* Upload the markdown.php file to your website directory.
+* Include the file in your blog or whatever PHP page - see the example.php file.
 * That's it.
 * Note: also prevent direct access to the markdown.php file, e.g. with .htaccess or similar.
 
